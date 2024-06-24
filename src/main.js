@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
         loader.style.display = 'block'; 
 
         try {
-            const images = await searchImages(query);
+            const images = await findImages(query);
             if (images.length === 0) {
                 iziToast.error({
                     title: 'Sorry',
                     message: 'There are no images for your search!'
                 });
             } else {
-                displayImages(images);
+                displayImg(images);
             }
         } catch (error) {
             iziToast.error({
